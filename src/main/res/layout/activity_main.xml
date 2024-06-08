@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171616"
+    android:backgroundTint="#171616"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/passwordText1"
+        android:layout_width="145dp"
+        android:layout_height="25dp"
+        android:text="Password"
+        android:textColor="#702191"
+        android:textColorHighlight="#8C0D0D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FBFAFA"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Welcome to YoungFlex"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#7F1CB5"
+        android:textColorHighlight="#32B187"
+        android:textColorLink="#FAFBF7"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="295dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter password"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textColor="@color/white"
+        android:textColorHint="#BEF6F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.184" />
+
+    <TextView
+        android:id="@+id/usernameText1"
+        android:layout_width="145dp"
+        android:layout_height="25dp"
+        android:text="Username"
+        android:textColor="#7627A6"
+        android:textColorHighlight="#8C0D0D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/username"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="295dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter username"
+        android:hyphenationFrequency="normal"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textColorHighlight="#1C1A1A"
+        android:textColorHint="#B4FAFAFA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="305dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="144dp"
+        android:text="Don't have an account yet?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#EAE5E5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="161dp"
+        android:layout_height="18dp"
+        android:clickable="true"
+        android:onClick="onLinkClick"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="138dp"
+        android:layout_height="52dp"
+        android:text="Log In"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101010"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="Weight(Kg)"
+        android:textColor="#8117B6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resWeight" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Age"
+        android:textColor="#8117B6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resAge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:text="Gender"
+        android:textColor="#8117B6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/passwordText2"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:text="Password"
+        android:textColor="#8117B6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resPassword"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Create your account"
+        android:textAlignment="center"
+        android:textColor="#A514DA"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <EditText
+        android:id="@+id/resUsername"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter username"
+        android:inputType="text"
+        android:textColor="#FBFBFB"
+        android:textColorHint="#B4FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/usernameText2"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:text="Username"
+        android:textColor="#8117B6"
+        android:textColorHint="#641388"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resUsername"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <EditText
+        android:id="@+id/resPassword"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter password"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textColor="#F3F1F1"
+        android:textColorHighlight="#7E0F0F"
+        android:textColorHint="#B4FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameText2"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:dropDownSelector="@android:drawable/arrow_down_float"
+        android:spinnerMode="dropdown"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText2"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <EditText
+        android:id="@+id/resAge"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter age"
+        android:inputType="number"
+        android:textColor="#F8F5F5"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#B4FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/resWeight"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="#0B6562"
+        android:ems="10"
+        android:hint="  Enter weight"
+        android:inputType="number"
+        android:textColor="#F6F5F5"
+        android:textColorHint="#B4FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/resButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightText"
+        app:layout_constraintVertical_bias="0.355" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101010"
+    tools:context=".ProjectDetails">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="40dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="240dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/black_ops_one"
+                android:text="Project Details"
+                android:textColor="#9D0DE4"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/deleteProject"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.003" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="121dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/displayDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.957"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/subtasks" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="125dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Project's Name"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.024" />
+
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_width="191dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="#22a6b3"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/displayDeadline"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="73dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Deadline"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView24"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/displayDeadline"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:textColor="#22a6b3"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/displayDescription"
+                app:layout_constraintEnd_toStartOf="@+id/displayStatus"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.807" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Status"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/displayStatus"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.844"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/displayStatus"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="108dp"
+                android:text=""
+                android:textColor="#22a6b3"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/displayDescription"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.807" />
+
+            <TextView
+                android:id="@+id/displayDescription"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="200dp"
+                android:text=""
+                android:textColor="#22a6b3"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/statusSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.107" />
+
+            <Spinner
+                android:id="@+id/statusSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="280dp"
+                android:textColor="#22a6b3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.619"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="109dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="276dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Change Status"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintEnd_toStartOf="@+id/statusSpinner"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <Button
+                android:id="@+id/saveStatus"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="276dp"
+                android:text="Save"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="320dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="List of subtasks"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/subtasksView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.822" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subtasksView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="452dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="125dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Description"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/displayDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/subtaskName"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="348dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="#0A4B8F"
+                android:ems="10"
+                android:hint="  Enter name"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHighlight="#1C1A1A"
+                android:textColorHint="#B4FAFAFA"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView21"
+                app:layout_constraintEnd_toStartOf="@+id/addSubtask"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="125dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="320dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Create subtask"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/subtaskName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/addSubtask"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="276dp"
+                android:text="Add"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.742" />
+
+            <Button
+                android:id="@+id/deleteProject"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:text="Delete"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.987"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workout_button"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/home_page"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:onClick="onHomePageClicked"
+            android:src="@drawable/home" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/workout_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/study_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/workout_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onWorkoutPageClicked"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/profile_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onProfilePageClicked"
+            app:srcCompat="@drawable/profile" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/study_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_button"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/study_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onStudyPageClicked"
+            app:srcCompat="@drawable/outline_bookmarks_24" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

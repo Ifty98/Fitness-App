@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040404"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Young"
+        android:textColor="#9D0DE4"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <ProgressBar
+        android:id="@+id/fitnessProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="156dp"
+        android:layout_height="144dp"
+        android:layout_marginBottom="4dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/rounded_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <ProgressBar
+        android:id="@+id/academicProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="156dp"
+        android:layout_height="144dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="70"
+        android:progressDrawable="@drawable/rounded_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="268dp"
+        android:layout_height="29dp"
+        android:text="Track your progress"
+        android:textColor="#F6F5F5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="77dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Flex"
+        android:textColor="#FD15BC"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="97dp"
+        android:layout_height="25dp"
+        android:text="Health"
+        android:fontFamily="@font/black_ops_one"
+        android:textAlignment="center"
+        android:textColor="#07FAAC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fitnessProgress"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="97dp"
+        android:layout_height="25dp"
+        android:text="Studies"
+        android:fontFamily="@font/black_ops_one"
+        android:textAlignment="center"
+        android:textColor="#07FAAC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicProgress"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="66dp"
+        android:layout_height="22dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="#0FE6C6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="66dp"
+        android:layout_height="22dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="#0FE6C6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="66dp"
+        android:layout_height="22dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="#0FE6C6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="58dp"
+        android:layout_height="21dp"
+        android:text="steps"
+        android:textAlignment="textStart"
+        android:textColor="#FBFBFB"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="58dp"
+        android:layout_height="21dp"
+        android:text="min"
+        android:textAlignment="textStart"
+        android:textColor="#FDFCFC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="58dp"
+        android:layout_height="21dp"
+        android:text="cal"
+        android:textAlignment="textStart"
+        android:textColor="#FFFCFC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workout_button"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/home_page"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:src="@drawable/home" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/workout_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/study_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/workout_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onWorkoutPageClicked"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/profile_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onProfilePageClicked"
+            app:srcCompat="@drawable/profile" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/study_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_button"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/study_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onStudyPageClicked"
+            app:srcCompat="@drawable/outline_bookmarks_24" />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/horizontalProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="267dp"
+        android:layout_height="41dp"
+        android:background="#000000"
+        android:backgroundTint="#000000"
+        android:progress="0"
+        android:progressTint="#7AAC9B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="131dp"
+        android:layout_height="32dp"
+        android:text="Daily Goal"
+        android:textColor="#DD087D"
+        android:textColorHighlight="#500C7A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713" />
+
+    <TextView
+        android:id="@+id/goalSteps"
+        android:layout_width="103dp"
+        android:layout_height="25dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="#DD087D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalProgressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="147dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="92dp"
+        android:text="/10,000   Steps"
+        android:textColor="#DD087D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalProgressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/healthProgress"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="20"
+        android:textAlignment="viewEnd"
+        android:textColor="#18B16F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/fitnessProgress"
+        app:layout_constraintTop_toTopOf="@+id/fitnessProgress" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="%"
+        android:textAlignment="viewStart"
+        android:textColor="#18B16F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/fitnessProgress"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="@+id/fitnessProgress"
+        app:layout_constraintTop_toTopOf="@+id/fitnessProgress" />
+
+    <TextView
+        android:id="@+id/studiesProgress"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="80"
+        android:textAlignment="viewEnd"
+        android:textColor="#18B16F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/academicProgress"
+        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/academicProgress"
+        app:layout_constraintTop_toTopOf="@+id/academicProgress" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:text="%"
+        android:textAlignment="viewStart"
+        android:textColor="#18B16F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/academicProgress"
+        app:layout_constraintEnd_toEndOf="@+id/academicProgress"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/academicProgress"
+        app:layout_constraintTop_toTopOf="@+id/academicProgress" />
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="34dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/steps"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.219"
+        app:srcCompat="@drawable/run" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="34dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.018"
+        app:srcCompat="@drawable/timer" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="34dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/calories"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fire" />
+
+    <ImageView
+        android:id="@+id/resetSteps"
+        android:layout_width="145dp"
+        android:layout_height="127dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/running" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="41dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/calories"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/target" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

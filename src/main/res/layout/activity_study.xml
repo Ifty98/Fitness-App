@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040404"
+    tools:context=".Study">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="40dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="240dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/black_ops_one"
+                android:text="Project Manager"
+                android:textColor="#9D0DE4"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <TextView
+                android:id="@+id/createProjectText"
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="Create new project"
+                android:textColor="#f5f6fa"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.48" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/almendra_sc"
+                android:text="List of projects"
+                android:textColor="#f5f6fa"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deadline" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="84dp"
+                android:layout_height="93dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.701"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/brain" />
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="208dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="92dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="#0A4B8F"
+                android:ems="10"
+                android:hint="  Enter name"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHighlight="#1C1A1A"
+                android:textColorHint="#B4FAFAFA"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/subtaskName"
+                app:layout_constraintEnd_toStartOf="@+id/imageView11"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.714" />
+
+            <EditText
+                android:id="@+id/subtaskName"
+                android:layout_width="280dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="#0A4B8F"
+                android:ems="10"
+                android:hint="  Enter description"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHighlight="#1C1A1A"
+                android:textColorHint="#B4FAFAFA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView11"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+            <Button
+                android:id="@+id/add_project"
+                android:layout_width="98dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:text="Add"
+                app:layout_constraintBottom_toTopOf="@+id/subtaskName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.703"
+                app:layout_constraintStart_toEndOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subtasksView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/deadline"
+                android:layout_width="280dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:backgroundTint="#0A4B8F"
+                android:ems="10"
+                android:hint="  Enter deadline"
+                android:inputType="date"
+                android:textColor="@color/white"
+                android:textColorHighlight="#1C1A1A"
+                android:textColorHint="#B4FAFAFA"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtaskName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workout_button"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/home_page"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:onClick="onHomePageClicked"
+            android:src="@drawable/home" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/workout_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/study_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/workout_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onWorkoutPageClicked"
+            app:srcCompat="@drawable/heart" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/profile_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onProfilePageClicked"
+            app:srcCompat="@drawable/profile" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/study_button"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#16CCA2"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_button"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.586">
+
+        <ImageView
+            android:id="@+id/study_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/outline_bookmarks_24" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
